@@ -24,8 +24,8 @@ public class Circle
         diameter = 30;
         xPosition = 20;
         yPosition = 60;
-        color = "blue";
-        isVisible = false;
+        color = "green";
+        isVisible = true;
     }
 
     /**
