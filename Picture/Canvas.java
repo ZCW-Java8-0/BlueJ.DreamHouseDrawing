@@ -28,8 +28,8 @@ public class Canvas
     public static Canvas getCanvas()
     {
         if(canvasSingleton == null) {
-            canvasSingleton = new Canvas("BlueJ Shapes Demo", 300, 300, 
-                    Color.white);
+            canvasSingleton = new Canvas("BlueJ Shapes Demo", 700, 700, 
+                    new Color(25, 25, 112));
         }
         canvasSingleton.setVisible(true);
         return canvasSingleton;
@@ -83,6 +83,7 @@ public class Canvas
             graphic.setColor(backgroundColour);
             graphic.fillRect(0, 0, size.width, size.height);
             graphic.setColor(Color.black);
+
         }
         frame.setVisible(visible);
     }
@@ -119,7 +120,8 @@ public class Canvas
      * Set the foreground colour of the Canvas.
      * @param  newColour   the new colour for the foreground of the Canvas 
      */
-    public void setForegroundColor(String colorString)
+    public void setForegroundColor(String colorString
+    )
     {
         if(colorString.equals("red"))
             graphic.setColor(Color.red);
@@ -135,7 +137,26 @@ public class Canvas
             graphic.setColor(Color.magenta);
         else if(colorString.equals("white"))
             graphic.setColor(Color.white);
-        else
+        else if(colorString.equals("brown"))
+            graphic.setColor(new Color(188,143,143));
+        else if(colorString.equals("dark green"))
+            graphic.setColor(new Color(0,100,0));
+        else if(colorString.equals("tan"))
+            graphic.setColor(new Color(210,180,140));
+            else if(colorString.equals("dark brown"))
+            graphic.setColor(new Color(78,53,36));
+            else if(colorString.equals("Midnight blue"))
+            graphic.setColor(new Color(25,25,112));
+            else if (colorString.equals("Moon Yellow"))
+            graphic.setColor(new Color(254, 252, 215));
+            else if (colorString.equals("Gray"))
+            graphic.setColor(new Color(183,179,164));
+            else if (colorString.equals("gravel"))
+            graphic.setColor(new Color(83,84,78));
+            else if (colorString.equals("gold"))
+            graphic.setColor(new Color(255,215,0));
+            
+        else 
             graphic.setColor(Color.black);
     }
 
